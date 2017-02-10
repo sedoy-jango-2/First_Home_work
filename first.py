@@ -1,11 +1,16 @@
 import ppapi
-import sys
 
 
+if __name__ == '__main__':
+    try:
+        movieNomber = int(input('Введите номер фильма: '))
+    except ValueError:
+        print('Введённые данные не являются числом')
+        exit()
 
-a = ppapi.make_tmdb_api_request(method='/movie/1')
-if a == 'False':
-    print('Такого фильма не сущесвует')
-    exit()
-else:
-    print('Бюджет фильма', a['title'], 'равен', a['budget'], '$')
+    print('Используется ', movieNomber,' номер фильма',sep='',end='\n')
+    movieDict = ppapi.make_api_request('movie/' + str(movieNomber))
+    if movieDict != 'error':
+        print('''Бюджет фильма - "''', movieDict['title'], '''" составил ''', movieDict['budget'], ' долларов', sep='', end='')
+    else:
+        print('Фильма с таким номером не существует на даннном сайте')
