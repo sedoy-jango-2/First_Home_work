@@ -1,6 +1,8 @@
 import os
 
 preference = input('Введите ключевое слово\n')
+preference = preference.lower()
+print(preference)
 
 try:
     file = open('movies.json', encoding='utf-8')
@@ -12,7 +14,7 @@ else:
         if os.stat('movies.json').st_size != 0:
             flag = False
             for line in file.readlines():
-                if line.find('title') == 0 and line.find(preference) > 0:
+                if line.find('title') == 0 and line.lower().find(preference) > 0:
                     print(line[line.find(':') + 1:])
                     flag = True
             if not flag:
