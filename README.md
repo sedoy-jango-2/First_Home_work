@@ -1,5 +1,4 @@
 # First_Home_work
-First python parsing progect
 api.py - файл содержащий основную функцию отправляющюю запрос на сайт tmdb
   make_api_request(what, extra_parameters=None) - функция выполняющая запрос
 загруженные библиотеки:
