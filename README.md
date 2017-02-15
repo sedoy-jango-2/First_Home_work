@@ -1,21 +1,32 @@
 # First_Home_work
 api.py - файл содержащий основную функцию отправляющюю запрос на сайт tmdb
+
   make_api_request(what, extra_parameters=None) - функция выполняющая запрос
+  
 загруженные библиотеки:
       requests
       time
+
 help_for_forth.py - файл содержащий функции для четвёртго задания
+
   make_string_array(currentLine, fromStr, toStr) - функция создающая массив строк из одной строки currentLine. Элемент массива в    currentLine содержится между fromStr и toStr.
+  
   comparison_in_arrayes(new_array, array) - функция сравнивающая два массива и возвращаяющая True если есть совпадения
   
 в файлах third.py и forth.py импортируется дополнительно библиотека os
 
 каждый файл
+
 first.py
+
 second.py
+
 third.py
+
 forth.py
+
 выполняет номер задания по названию
+
 если запускать third.py и forth.py без запуска second.py, то программы не заработают, так как в папке не будет .json файла
 #first.py
 при вводе определённого номера фильма, программа выводит сообщение, что фильм с таким-то названием имеет такой-то бюджет в долларах
